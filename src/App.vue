@@ -5,6 +5,8 @@
       <router-link to="/about">About</router-link>
     </div>
     <router-view/>
+    <router-view name='profile'/>
+    <router-view name='articles'/>
   </div>
 </template>
 <script>

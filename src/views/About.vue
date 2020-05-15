@@ -4,3 +4,11 @@
     <router-view></router-view>
   </div>
 </template>
+
+<script>
+export default {
+  beforeEnter: (to, from, next) => {
+    console.log(to, 'about----------')
+  }
+}
+</script>
