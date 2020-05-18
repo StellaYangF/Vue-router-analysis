@@ -31,6 +31,9 @@ export default [
     path: "/about",
     name: "about",
     component: About,
+    meta: {
+      requiredAuth: false,
+    },
     // alias: '/aboutalias',
     children: [
       {
@@ -45,13 +48,19 @@ export default [
       {
         path: "b/:id",
         name: "b",
-        component: () => import('@/views/A.vue'),
+        component: () => import(/* webpackChunkName: "group-about" */'@/views/B.vue'),
+        props:true,
+      },
+      {
+        path: "c/:id",
+        name: "c",
+        component: () => import(/* webpackChunkName: "group-about" */'@/views/C.vue'),
         props:true,
       }
     ]
   },
   {
     path: "*",
-    component: () => import('@/views/NotFound.vue')
+    component: () => import(/* webpackChunkName: "notFound" */'@/views/NotFound.vue')
   }
 ];

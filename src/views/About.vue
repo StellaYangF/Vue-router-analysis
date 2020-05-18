@@ -12,3 +12,9 @@ export default {
   }
 }
 </script>
+
+<style>
+  .about {
+    height: 1000px;
+  }
+</style>
