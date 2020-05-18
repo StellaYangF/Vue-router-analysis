@@ -1,5 +1,5 @@
-import View from './components/router-view';
-import Link from './components/router-link';
+import View from './components/view';
+import Link from './components/link';
 
 let Vue;
 
