@@ -1,7 +1,7 @@
 import Vue from "vue";
-import VueRouter from 'vue-router'
-// import VueRouter from "@/vue-router";
-import routes from './routes';
+// import VueRouter from 'vue-router'
+import VueRouter from "../../packages/vue-router";
+import routes from "./routes";
 
 Vue.use(VueRouter);
 
@@ -15,6 +15,11 @@ const router = new VueRouter({
   //     x: 100, y: 100
   //   }
   // }
+});
+
+router.beforeEach((to, from, next) => {
+  console.log(to, "to");
+  next();
 });
 
 export default router;

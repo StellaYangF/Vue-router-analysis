@@ -10,5 +10,9 @@ export class HashHistory extends History{
     super(router);
     ensureSlash();
   }
+
+  getCurrentLocation() {
+    return window.location.hash.slice(1);
+  }
 }
 

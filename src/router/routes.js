@@ -20,12 +20,13 @@ export default [
     //   return '/about'
     // },
     name: "home",
-    components: {
-      default: Home,
-      profile: Profile,
-      articles: Articles,
-      about: About,
-    }
+    component: Home,
+    // components: {
+    //   default: Home,
+    //   profile: Profile,
+    //   articles: Articles,
+    //   about: About,
+    // }
   },
   {
     path: "/about",

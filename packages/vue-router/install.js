@@ -1,5 +1,5 @@
-import View from './components/view';
-import Link from './components/link';
+import View from './components/router-view';
+import Link from './components/router-link';
 
 let Vue;
 
@@ -14,8 +14,9 @@ export default function install(_Vue) {
         this._routerRoot = this;
         this._router = this.$options.router;
         this._router.init(this);
+        Vue.util.defineReactive(this, '_route', this._router.history.current);
       } else {
-        this.routerRoot = (this.$parent && this.$parent._routerRoot) || this;
+        this._routerRoot = (this.$parent && this.$parent._routerRoot) || this;
       }
     }
   })
