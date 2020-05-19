@@ -34,12 +34,20 @@ class VueRouter {
   }
 
   init(app) {
-    const history = this.history;
-    const setupHashListener = () => history.setupListener();
-    history.transitionTo(
-      history.getCurrentLocation(),
-      setupHashListener
-    )
+    const history = this.history
+
+    if (history instanceof HTML5History) {
+      history.transitionTo(history.getCurrentLocation())
+    } else if (history instanceof HashHistory) {
+      const setupHashListener = () => {
+        history.setupListener()
+      }
+      history.transitionTo(
+        history.getCurrentLocation(),
+        setupHashListener,
+        setupHashListener
+      )
+    }
 
     history.listen(route => app._route = route)
   }

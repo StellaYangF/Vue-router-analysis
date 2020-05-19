@@ -10,6 +10,7 @@ export default function install(_Vue) {
 
   Vue.mixin({
     beforeCreate() {
+      console.log('mixin')
       if (this.$options.router) {
         this._routerRoot = this;
         this._router = this.$options.router;

@@ -11,7 +11,10 @@
 </template>
 <script>
 export default {
-  name: "app"
+  name: "app",
+  beforeCreate() {
+    console.log('root');
+  },
 }
 </script>
 <style lang="stylus">

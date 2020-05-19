@@ -5,6 +5,12 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    btnAuth: {
+      edit: true,
+      delete: true,
+      add: true,
+      search: true
+    }
   },
   mutations: {
   },
