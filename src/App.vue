@@ -7,13 +7,18 @@
     <router-view/>
     <!-- <router-view name='profile'/>
     <router-view name='articles'/> -->
+
+    <hr>
+    <h3>button permission</h3>
+    <button v-has='edit'>edit</button>
+    <button v-has='dlt'>delete</button>
   </div>
 </template>
 <script>
 export default {
   name: "app",
   beforeCreate() {
-    console.log('root');
+    // console.log('root');
   },
 }
 </script>

@@ -5,7 +5,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    btnAuth: {
+    btnPermission: {
       edit: true,
       delete: true,
       add: true,
@@ -13,6 +13,7 @@ export default new Vuex.Store({
     }
   },
   mutations: {
+    
   },
   actions: {
   },

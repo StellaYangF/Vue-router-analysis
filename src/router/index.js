@@ -3,7 +3,6 @@ import VueRouter from 'vue-router'
 // import VueRouter from "../../packages/vue-router";
 import routes from "./routes";
 
-debugger;
 Vue.use(VueRouter);
 
 const router = new VueRouter({
@@ -19,7 +18,7 @@ const router = new VueRouter({
 });
 
 router.beforeEach((to, from, next) => {
-  console.log(to, "to");
+  // console.log(to, "to");
   next();
 });
 

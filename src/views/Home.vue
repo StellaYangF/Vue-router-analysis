@@ -12,7 +12,7 @@ export default {
   //   console.log(to);
   // },
    beforeCreate() {
-    console.log('child');
+    // console.log('child');
   },
 }
 </script>
